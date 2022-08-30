@@ -1,0 +1,5 @@
+Processed files: 3
+Blank lines: 24
+Comment lines: 4
+Code lines: 110
+Execution time: 1021 micro seconds.
