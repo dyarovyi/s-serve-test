@@ -31,4 +31,8 @@ public:
     void swap(AnyType& B);
 
     AnyType& operator = (AnyType& b);
+    AnyType& operator = (bool b);
+    AnyType& operator = (char c);
+    AnyType& operator = (int i);
+    AnyType& operator = (float f);
 };

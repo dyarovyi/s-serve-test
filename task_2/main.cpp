@@ -16,6 +16,12 @@ int main()
     cout << a->toChar() << endl;
     cout << a->toFloat() << endl;
 
+    AnyType c(2);
+    c = 5;
+    cout << c.toInt() << endl;
+    cout << c.toBool() << endl;
+    cout << c.toChar() << endl;
+    cout << c.toFloat() << endl;
     //cout << typeid(a->toChar()).name() << endl;
     return 0;
 }

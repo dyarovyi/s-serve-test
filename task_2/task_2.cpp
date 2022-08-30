@@ -86,3 +86,27 @@ AnyType& AnyType::operator = (AnyType& B)
         return a;
     }
 }
+
+AnyType& AnyType::operator = (bool b)
+{
+    static AnyType a = AnyType(b);
+    return a;
+}
+
+AnyType& AnyType::operator = (char c)
+{
+    static AnyType a = AnyType(c);
+    return a;
+}
+
+AnyType& AnyType::operator = (int i)
+{
+    static AnyType a = AnyType(i);
+    return a;
+}
+
+AnyType& AnyType::operator = (float f)
+{
+    static AnyType a = AnyType(f);
+    return a;
+}
