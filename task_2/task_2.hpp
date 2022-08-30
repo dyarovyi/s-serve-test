@@ -14,6 +14,7 @@ public:
     AnyType(char value);
     AnyType(int value);
     AnyType(float value);
+    ~AnyType();
 
     bool isBool = false;
     bool isChar = false;

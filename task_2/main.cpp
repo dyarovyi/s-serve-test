@@ -23,5 +23,9 @@ int main()
     cout << c.toChar() << endl;
     cout << c.toFloat() << endl;
     //cout << typeid(a->toChar()).name() << endl;
+
+    a->swap(c);
+    cout << a->toBool() << endl;
+    cout << c.toBool() << endl;
     return 0;
 }

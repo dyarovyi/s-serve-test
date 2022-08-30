@@ -29,6 +29,11 @@ AnyType::AnyType(float new_value)
     isFloat = true;
 }
 
+AnyType::~AnyType()
+{
+    value = nullptr;
+}
+
 bool AnyType::toBool()
 {
     value = (bool*)(value);
@@ -63,6 +68,13 @@ void* AnyType::getValue()
     return value;
 }
 
+void AnyType::swap(AnyType& B)
+{
+    static void* temp = B.getValue();
+    B.setValue(getValue());
+    setValue(temp);
+}
+
 AnyType& AnyType::operator = (AnyType& B)
 {
     if (isBool)
@@ -70,12 +82,12 @@ AnyType& AnyType::operator = (AnyType& B)
         static AnyType a = AnyType(*(bool*)B.getValue());
         return a;
     }
-    else if (isBool)
+    else if (isChar)
     {
         static AnyType a = AnyType(*(char*)B.getValue());
         return a;
     }
-    else if (isBool)
+    else if (isInt)
     {
         static AnyType a = AnyType(*(int*)B.getValue());
         return a;
