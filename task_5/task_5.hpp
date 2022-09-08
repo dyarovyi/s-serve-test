@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <cmath>
 
 class Interpolator {
 public:
@@ -8,7 +9,6 @@ public:
     Interpolator(const std::vector<std::pair<double, double>> &new_data);
 
     std::vector<std::pair<double, double>> &get_data();
-
     virtual void interpolate(int intervals) = 0;
     double f(double x);
 };
@@ -22,7 +22,8 @@ public:
 
 class HermiteInterpolator : public Interpolator {
 public:
-    HermiteInterpolator(const std::vector<std::pair<double, double>> &new_data);
+    std::vector<double> x;
+    HermiteInterpolator(const std::vector<std::pair<double, double>> &new_data, std::vector<double> &new_x);
     void interpolate(int intervals);
-    double f(double x);
+    double f(double x, double x0, double x1, double y0, double dy0, double y1, double dy1);
 };
