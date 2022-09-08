@@ -11,7 +11,9 @@ class MainComponent  : public juce::Component
 {
 public:
     //==============================================================================
-    MainComponent();
+    MainComponent() {
+        setSize(600, 400);
+    }
     ~MainComponent() override;
 
     //==============================================================================
