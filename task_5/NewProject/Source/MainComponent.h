@@ -1,6 +1,7 @@
 #pragma once
 
 #include <JuceHeader.h>
+#include "SourceCode.h"
 
 //==============================================================================
 /*
@@ -11,9 +12,7 @@ class MainComponent  : public juce::Component
 {
 public:
     //==============================================================================
-    MainComponent() {
-        setSize(600, 400);
-    }
+    MainComponent();
     ~MainComponent() override;
 
     //==============================================================================
@@ -27,3 +26,5 @@ private:
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };
+
+void exec();
