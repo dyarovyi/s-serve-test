@@ -22,8 +22,8 @@ public:
 
 class HermiteInterpolator : public Interpolator {
 public:
-    std::vector<double> x;
-    HermiteInterpolator(const std::vector<std::pair<double, double>> &new_data, std::vector<double> &new_x);
+    std::vector<double> derivatives;
+    HermiteInterpolator(const std::vector<std::pair<double, double>> &new_data, std::vector<double> &derivatives);
     void interpolate(int intervals);
     double f(double x, double x0, double x1, double y0, double dy0, double y1, double dy1);
 };
