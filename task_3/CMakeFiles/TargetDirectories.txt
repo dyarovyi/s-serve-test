@@ -1,0 +1,3 @@
+/Users/dyarovyi/Desktop/Work/s-serve-test/task_3/CMakeFiles/main.dir
+/Users/dyarovyi/Desktop/Work/s-serve-test/task_3/CMakeFiles/edit_cache.dir
+/Users/dyarovyi/Desktop/Work/s-serve-test/task_3/CMakeFiles/rebuild_cache.dir

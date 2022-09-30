@@ -54,7 +54,7 @@ int AnyType::toInt()
 
 float AnyType::toFloat()
 {
-    value = (float*)(value);
+    value = (float*)((int*)(value));
     return *(float*)(value);
 }
 

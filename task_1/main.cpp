@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-#include "task_1.cpp"
+// #include "task_1.cpp"
+#include "test.cpp"
 
 /* Read list from console */
 void string_list_read_from_console(char*** list)
@@ -45,8 +46,11 @@ int main()
 {
     char **list = NULL;
 
-    string_list_read_from_console(&list);
-    string_list_print(list);
+    Test *UT = new Test();
+    UT->test_append(); 
+
+    // string_list_read_from_console(&list);
+    // string_list_print(list);
 
     // char str0[] = "x";
     // string_list_append(list, str0);
@@ -60,10 +64,10 @@ int main()
     // string_list_append(list, str2);
     // string_list_print(list);
 
-    char str[] = "b\n";
-     //string_list_destroy(&list);
-     string_list_remove(list, str);
-    string_list_print(list);
+    // char str[] = "b\n";
+    //string_list_destroy(&list);
+    // string_list_remove(list, str);
+    // string_list_print(list);
     //printf("%d", string_list_get_index(list, str));
 
 // void string_list_init(char*** list);
